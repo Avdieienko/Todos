@@ -1,0 +1,130 @@
+.App {
+  text-align: center;
+  align-items: center;
+}
+
+
+.table_header{
+  display: flex;
+  flex-direction: row;
+  width:60%;
+  margin: auto;
+  text-align: left;
+}
+
+.table_header h1{
+  font-size: 2vw;
+}
+
+.header_name{
+  width: 30%;
+}
+
+.header_description{
+  width:40%;
+}
+
+.header_actions{
+  width: 30%;
+}
+
+.todo{
+  display:flex;
+  flex-direction: row;
+  border-bottom:1px solid;
+  border-image: linear-gradient(90deg, white,white,black,black,black,white, white) 1;
+  padding: 3% 0;
+  width:60%;
+  margin: auto;
+  text-align: left;
+  align-items: center;
+}
+
+.todo_header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin:0 auto;
+  width:fit-content;
+  align-items: center;
+}
+
+.todo_name{
+  width:30%;
+  font-size: 2.5vw;
+}
+
+.todo_description{
+  font-size: 1.5vw;
+  color:grey;
+  width:40%;
+}
+
+
+.change_outer{
+  display: none;
+  position:fixed;
+  top:0%;
+  z-index: 98;
+  height:100vh;
+  width:100vw;
+  background-color: rgba(128, 128, 128, 0.541);
+}
+
+.change_inner{
+  position: relative;
+  width:35%;
+  height:25%;
+  left:50%;
+  top:0%;
+  transform: translate(-50%, 90%);
+  background-color: white;
+  align-items: center;
+  text-align: center;
+  padding-top: 5%;
+}
+
+.change_inner form{
+  margin:auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height:80%;
+  width:80%;
+  z-index: 99;
+}
+
+.exit{
+  position: absolute;
+  right:0%;
+  top:0%;
+  text-align: right;
+}
+
+.submition{
+  width:40%;
+  margin: 0 auto;
+}
+
+
+.input_block{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
+}
+
+.input_block label{
+  font-size: 1.2vw;
+}
+
+.input_block input{
+  width:70%;
+}
+
+
+.show{
+  display: block;
+  transform: translate(0%, 0%);
+}
