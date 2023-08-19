@@ -78,9 +78,11 @@ function App() {
             onChange={e=>setName(e.target.value)}
           />
         </form>
-        <h1 className='header_name'>Name</h1>
-        <h1 className='header_description'>Description</h1>
-        <h1 className='header_actions'>Actions</h1>
+        <div className='todo_header'>
+          <h1 className='header_name'>Name</h1>
+          <h1 className='header_description'>Description</h1>
+          <h1 className='header_actions'>Actions</h1>
+        </div>
         <h1 className='header_completed'>Completed</h1>
         <div className='todos'>
           {todos.todos.map(todo=>{

@@ -5,7 +5,7 @@ import { ACTIONS } from "../App"
 
 export const Completed = ({todo, dispatch}) =>{
     return(
-        <div>
+        <div className="todo_completed">
             <p>{todo.name}</p>
             <button onClick={()=>dispatch({type:ACTIONS.RETURN_COMPLETED, payload:{id:todo.id}})}><TiArrowBackOutline/></button>
             <button onClick={()=>dispatch({type:ACTIONS.DELETE_COMPLETED, payload:{id:todo.id}})}><MdOutlineDeleteForever/></button>

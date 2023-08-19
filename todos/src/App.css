@@ -10,12 +10,25 @@
 header{
   grid-area: 1/2/2/4;
   text-align: center;
+  font-size: 5vw;
+  border-bottom: 1px solid grey;
+}
+
+.todo_actions{
+  width:2vw;
+  height:auto;
 }
 
 
 .main_input{
   grid-area: 2/2/3/4;
   text-align: center;
+  height:30%
+}
+.main_input input{
+  width:50%;
+  height:100%;
+  font-size:1.5vw
 }
 
 .completed{
@@ -26,23 +39,25 @@ header{
 
 
 .header_name{
-  grid-area: 3/1/4/2;
+  width:15vw;
   font-size: 2vw;
 }
 
 .header_description{
-  grid-area: 3/2/4/3;
+  width:25vw;
   font-size: 2vw;
 }
 
 .header_actions{
-  grid-area: 3/3/4/4;
   font-size: 2vw;
+  width:10vw;
+  margin-right: 2%;
 }
 
 .header_completed{
   grid-area: 3/4/4/-1;
   font-size: 2vw;
+  margin-left: 10%;
 }
 
 .todos{
@@ -60,28 +75,45 @@ header{
   width:100%;
   margin: auto;
   align-items: center;
+  justify-content: space-between;
+}
+.todo p{
+  margin:2% 0%
 }
 
-.todo_header{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin:0 auto;
-  width:fit-content;
-  align-items: center;
-}
+
 
 .todo_name{
-  width:30%;
+  width:15vw;
   font-size: 2vw;
 }
 
 .todo_description{
   font-size: 1.3vw;
   color:grey;
-  width:40%;
+  width:25vw;
+}
+.todo_handlers{
+  width:10vw;
+  margin-right: 2%;
 }
 
+.todo_header{
+  grid-area: 3/1/4/4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.todo_completed{
+  margin-left: 10%;
+}
+.todo_completed p{
+  margin: 2% 0;
+}
+.todo_completed svg{
+  width:1.3vw;
+  height: auto;
+}
 
 .change_outer{
   display: none;
@@ -153,3 +185,50 @@ header{
 }
 
 
+@media (orientation:portrait) {
+  .todo_actions{
+    width:3vw;
+  }
+  .App{
+    grid-template-columns: 20% 30% 30% 20%;
+    grid-template-rows: 5vh 3vh 5vh 70vh;
+    margin:auto 3%;
+  }
+  .todo_name{
+    font-size: 3vw;
+  }
+  .todo_description{
+    font-size: 2vw;
+    color:grey;
+  }
+  .todo_handlers, .header_actions{
+    width:23vw;
+  }
+  .todo_completed p{
+    font-size: 2.5vw;
+  }
+  .todo_completed svg{
+    width:2.5vw;
+    height: auto;
+  }
+  .main_input input{
+    width:80%;
+    height:100%;
+    font-size:3vw
+  }
+  .main_input{
+    height:50%;
+  }
+  .change_inner{
+    width:70%;
+    height:20%;
+    transform: translate(-50%, 140%);
+    padding-top: 10%;
+  }
+  .input_block label{
+    font-size: 2.5vw;
+  }
+  .todo p{
+    margin:5% 0;
+  }
+}
